@@ -33,7 +33,7 @@
 
   </div>
 </section>
-<footer><div class="wrap">© <span id="year"></span> Mathematics & AI Seminar Series · Independent academic initiative</div></footer>
+<footer><div class="wrap">© <span id="year"></span> Mathematics & AI Seminar Series</div></footer>
 <script src="seminars.js"></script><script>
 const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function renderTalk(t){const e=escapeHTML;return `<article class="talk"><div class="tag">${e(t.date||'Date to be announced')}</div><h3>${e(t.title||'Talk title to be announced')}</h3><p class="meta">${e(t.speaker||'Speaker to be announced')}${t.affiliation?' · '+e(t.affiliation):''}</p><p><strong>Time:</strong> ${e(t.time||'To be announced')} · <strong>Format:</strong> ${e(t.format||'Online')}</p>${t.abstract?`<p>${e(t.abstract)}</p>`:''}${t.link&&/^https:\/\//.test(t.link)?`<p><a href="${e(t.link)}" rel="noopener noreferrer">More information</a></p>`:''}</article>`}
